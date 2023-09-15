@@ -1,6 +1,8 @@
 import streamlit as st
 from fastai.vision.all import *
-
+import pathlib
+plt = platform.system()
+if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath
 
 current_dir = os.getcwd()
 model = 'resnet_model_14_Sep_1.pkl'
