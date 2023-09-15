@@ -1,10 +1,8 @@
 import streamlit as st
 from fastai.vision.all import *
-from pathlib import Path
 
-model_path = Path('resnet_model_14_Sep_1.pkl')
-model = load_learner(model_path)
 
+model = load_learner('./resnet_model_14_Sep_1.pkl')
 
 st.title("Defect Classification")
 st.write("Upload an image to check whether if it's normal or defective (stain)")
